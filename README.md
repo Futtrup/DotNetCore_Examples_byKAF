@@ -6,7 +6,7 @@ Start looking here to understand the API/Code.
 
 To generate database:
 	Make sure the connectionstring in the appsettings matches your SQL instance.
-	Run this command in the Package Manager Console from withing visual studio: update-database
+	Run this command in the Package Manager Console from within visual studio: update-database
 
 For other commands look at this site:
 https://www.entityframeworktutorial.net/efcore/entity-framework-core-migration.aspx
