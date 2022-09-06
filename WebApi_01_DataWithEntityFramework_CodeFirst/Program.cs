@@ -18,7 +18,20 @@ builder.Services.AddDbContext<PersonDbContext>(opts =>
 Console.WriteLine("Use a hosted service to ensure that data exists");
 builder.Services.AddHostedService<DataService>();
 
+Console.WriteLine("Make sure we handle CORS");
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("MyPolicies", builder => builder
+        .AllowAnyMethod()
+        .AllowAnyHeader()
+        .AllowCredentials()
+        .SetIsOriginAllowed(hostName => true)
+        );
+});
+
 var app = builder.Build();
+
+app.UseCors("MyPolicies");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
