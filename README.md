@@ -10,3 +10,5 @@ To generate database:
 
 For other commands look at this site:
 https://www.entityframeworktutorial.net/efcore/entity-framework-core-migration.aspx
+
+NuGet packages is installed to match the NetCore version 6.0 (LTS)
